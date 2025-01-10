@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "838635595432",
+    "project_id": "one-servicos-opticos",
+    "storage_bucket": "one-servicos-opticos.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838635595432:android:65d6d4cb8e48882ccd849d",
+        "android_client_info": {
+          "package_name": "com.example.oneservicosopticos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWVUECrfIkLw0iQ-mp76EqAFWX9bWvtA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CadastroClienteActivity">
+
+
+    <!-- Nome -->
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o nome" />
+
+    <!-- CPF/CNPJ Selector -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioCPF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPF" />
+
+        <RadioButton
+            android:id="@+id/radioCNPJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CNPJ" />
+    </RadioGroup>
+
+    <!-- CPF/CNPJ -->
+    <TextView
+        android:id="@+id/textViewCpfCnpj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CPF/CNPJ"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextCpfCnpj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite CPF ou CNPJ" />
+
+    <!-- Endereço -->
+    <TextView
+        android:id="@+id/textViewEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Endereço"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o endereço" />
+
+    <!-- Botão de Salvar -->
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+
+</LinearLayout>
