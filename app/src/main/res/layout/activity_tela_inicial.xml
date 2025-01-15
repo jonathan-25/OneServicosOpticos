@@ -17,25 +17,26 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         android:onClick="novoPedido"
-        app:cardBackgroundColor="#EB4E7C"
+        app:cardBackgroundColor="#EBABA9"
+        app:cardElevation="4dp"
+        app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
         app:cardCornerRadius="20dp">
 
         <ImageView
             android:id="@+id/imageViewNovoPedido"
-            android:layout_width="wrap_content"
+            android:layout_width="152dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:paddingLeft="30dp"
-            app:srcCompat="@drawable/anotar" />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/novo_pedido" />
 
         <TextView
             android:id="@+id/textViewNovoPedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingStart="50dp"
+            android:layout_gravity="end|center"
+            android:paddingEnd="70dp"
             android:text="Novo Pedido"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -49,25 +50,24 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:onClick="minhasCompras"
-        app:cardBackgroundColor="#FB7C59"
+        app:cardBackgroundColor="#C47735"
         app:cardCornerRadius="20dp">
 
         <ImageView
             android:id="@+id/imageViewMinhasCompras"
-            android:layout_width="120dp"
-            android:layout_height="116dp"
-            android:layout_gravity="center|left"
-            android:paddingLeft="30dp"
-            app:srcCompat="@drawable/carrinho" />
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/minhas_compras" />
 
         <TextView
             android:id="@+id/textViewMinhasCompras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingStart="70dp"
+            android:layout_gravity="end|center"
+            android:paddingEnd="30dp"
             android:text="Minhas Compras"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -82,26 +82,25 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:onClick="Contato"
-        app:cardBackgroundColor="#3FBCBB"
+        app:cardBackgroundColor="#87908D"
         app:cardCornerRadius="20dp">
 
 
         <ImageView
             android:id="@+id/imageViewContato"
-            android:layout_width="121dp"
-            android:layout_height="113dp"
-            android:layout_gravity="center|left"
-            android:paddingLeft="30dp"
-            app:srcCompat="@drawable/msg" />
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/atendente" />
 
         <TextView
             android:id="@+id/textViewContato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingStart="50dp"
+            android:layout_gravity="end|center"
+            android:paddingEnd="110dp"
             android:text="Contato"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -116,26 +115,25 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:onClick="cadastroCliente"
-        app:cardBackgroundColor="#F3E354"
+        app:cardBackgroundColor="#AAB8B9"
         app:cardCornerRadius="20dp">
 
 
         <ImageView
             android:id="@+id/imageViewCadastro"
-            android:layout_width="121dp"
-            android:layout_height="113dp"
-            android:layout_gravity="center|left"
-            android:paddingLeft="30dp"
-            app:srcCompat="@drawable/cadastro_cliente" />
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/cadastro" />
 
         <TextView
             android:id="@+id/textViewCadastro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingStart="50dp"
-            android:text="Cadastrar Cliente"
-            android:textColor="@color/black"
+            android:layout_gravity="end|center"
+            android:paddingEnd="90dp"
+            android:text="Cadastrar"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
