@@ -9,6 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#64B5F6"
         android:theme="@style/Theme.OneServicosOpticos.AppBarOverlay">
 
         <TextView
@@ -16,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textColor="@color/white"
             android:minHeight="?actionBarSize"
+            android:background="#64B5F6"
             android:padding="@dimen/appbar_padding"
             android:text="@string/app_name"
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
@@ -24,7 +27,11 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:background="#64B5F6"
+            app:tabTextColor="#FFFFFF"
+            app:tabIndicatorColor="@color/black"
+            android:layout_height="wrap_content"
+            android:contentDescription="tab" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager2.widget.ViewPager2
@@ -40,5 +47,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:backgroundTint="#2196F3"
+        android:contentDescription="fab"
+        app:srcCompat="@drawable/can" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

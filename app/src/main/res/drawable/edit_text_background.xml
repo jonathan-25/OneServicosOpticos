@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#DDDDDD"/> <!-- Cor de fundo cinza claro -->
+    <corners android:radius="8dp"/>
+    <stroke android:width="2dp" android:color="#606463"/> <!-- Bordas em tom de verde chamativo -->
+    <padding android:left="12dp" android:top="12dp" android:right="12dp" android:bottom="12dp"/>
+</shape>
+
+
