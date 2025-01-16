@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.EscolhaTipoVendaActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="telaLenteAcabada"
+        app:cardBackgroundColor="#000000"
+        app:cardElevation="4dp"
+        app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/imageViewLenteAcabada"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/lente_acabada" />
+
+        <TextView
+            android:id="@+id/textViewLenteAcabada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:paddingEnd="60dp"
+            android:text="Lente Acabada"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="telaLenteAcabada"
+        app:cardBackgroundColor="#8596A6"
+        app:cardElevation="4dp"
+        app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/imageViewLenteContato"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/lente_de_contato" />
+
+        <TextView
+            android:id="@+id/textViewLenteContato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:paddingEnd="69dp"
+            android:text="Lente Contato"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="telaLenteAcabada"
+        app:cardBackgroundColor="#000000"
+        app:cardElevation="4dp"
+        app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/imageViewLenteSurfacada"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/lente_surfacada" />
+
+        <TextView
+            android:id="@+id/textViewLenteSurfacada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:paddingEnd="49dp"
+            android:text="Lente Surfacada"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
