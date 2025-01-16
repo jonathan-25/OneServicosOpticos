@@ -13,6 +13,14 @@
         android:theme="@style/Theme.OneServicosOpticos"
         tools:targetApi="31">
         <activity
+            android:name=".activity.PedidoLenteAcabadaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_pedido_lente_acabada"
+            android:theme="@style/Theme.OneServicosOpticos.NoActionBar" />
+        <activity
+            android:name=".activity.EscolhaTipoVendaActivity"
+            android:exported="false" />
+        <activity
             android:name=".CadastroClienteActivity"
             android:exported="false" />
         <activity
