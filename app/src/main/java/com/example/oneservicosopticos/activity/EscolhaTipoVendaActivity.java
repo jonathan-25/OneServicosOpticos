@@ -1,4 +1,4 @@
-package com.example.oneservicosopticos;
+package com.example.oneservicosopticos.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,47 +10,27 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.oneservicosopticos.activity.EscolhaTipoVendaActivity;
+import com.example.oneservicosopticos.EscolhaLentesActivity;
+import com.example.oneservicosopticos.R;
+import com.example.oneservicosopticos.TelaInicialActivity;
 
-public class TelaInicialActivity extends AppCompatActivity {
+public class EscolhaTipoVendaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tela_inicial);
-
-
+        setContentView(R.layout.activity_escolha_tipo_venda);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-
-
-
-
-
-
     }
 
-    public void escolhaTipoVenda(View view) {
+    public void telaLenteAcabada(View view) {
 
-        Intent intent = new Intent(TelaInicialActivity.this, EscolhaTipoVendaActivity.class);
-        startActivity(intent);
-
-    }
-
-    public void minhasCompras(View view) {
-    }
-
-    public void Contato(View view) {
-    }
-
-    public void cadastroCliente(View view) {
-
-        Intent intent = new Intent(TelaInicialActivity.this,CadastroClienteActivity.class);
+        Intent intent = new Intent(EscolhaTipoVendaActivity.this, PedidoLenteAcabadaActivity.class);
         startActivity(intent);
 
     }

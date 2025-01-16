@@ -16,7 +16,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
-        android:onClick="novoPedido"
+        android:onClick="escolhaTipoVenda"
         app:cardBackgroundColor="#EBABA9"
         app:cardElevation="4dp"
         app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
