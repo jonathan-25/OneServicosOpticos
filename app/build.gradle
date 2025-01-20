@@ -44,6 +44,8 @@ dependencies {
     implementation libs.constraintlayout.core
     implementation libs.lifecycle.livedata.ktx
     implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.camera.core
+    implementation libs.camera.lifecycle
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
