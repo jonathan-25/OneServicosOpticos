@@ -1,14 +1,510 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.fragments.DadosLenteFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:background="#FFFFFF"> <!-- Fundo branco -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+
+        <TextView
+            android:id="@+id/text_lenteOD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lente Olho Direito"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editLenteOD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Lente OD"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+        <TextView
+            android:id="@+id/text_lenteOE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Lente Olho Esquerdo"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editLenteOE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Lente OE"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:text="Grau e Adicao" />
+
+        <!-- Campos menores em 3 linhas e 3 colunas -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/tablelayout_background"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textEsfericoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Esferico"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelCilindricoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Cilindrico"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelEixoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Eixo"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/labelEixoAdicaoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Adicao"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editgrauD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Grau OD"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editCilindricoE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Cil OD"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editEixoD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Eixo OD"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editAdicaoD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Adic OD"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textEsfericoE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Esferico"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelCilindricoE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Cilindrico"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelEixoE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Eixo"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/labeAdicaoE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Adicao"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editgrauE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Grau OE"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editCilindricoD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Cil OE"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editEixoE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Eixo OE"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editAdicaoE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Adic OE"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:text="Medidas DP e Altura" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/tablelayout_background"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/labelDnpD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="DNP D"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelAlturaD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Altura D"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelPrismaD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Prisma D"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/labelEixoPrismaD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Prisma D"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editDnpD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="DNP D"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editAlturD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Alt D"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editPrismaD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Prism D"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editEixoPrismaD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Eixo D"
+                    android:padding="16dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/labelDnpE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="DNP E"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelAlturaE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Altura E"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelPrismaE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Prisma E"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/labelEixoPrismaE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Prisma E"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editDnpE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="DNP E"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editAlturE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Alt E"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editPrismaE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Prism E"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editEixoPrismaE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Eixo E"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/openCameraButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="70dp"
+            android:backgroundTint="#43A047"
+            android:drawableLeft="@drawable/can"
+            android:padding="10dp"
+            android:text="Tire as Medidas DP e Altura de seu cliente posicionando marcadores na imagem  !"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+</ScrollView>

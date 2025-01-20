@@ -40,14 +40,18 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#2196F3"
         android:contentDescription="fab"
-        app:srcCompat="@drawable/can" />
+        android:textColor="@color/black"
+        android:text="Salvar Pedido"
+        android:backgroundTint="#FF8F00"
+        app:icon="@drawable/disk_save"
+        app:iconSize="50dp"
+        app:iconTint="@color/black" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
