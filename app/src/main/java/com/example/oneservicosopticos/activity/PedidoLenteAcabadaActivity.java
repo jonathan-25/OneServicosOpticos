@@ -2,6 +2,11 @@ package com.example.oneservicosopticos.activity;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.camera.core.CameraSelector;
+import androidx.camera.core.ImageCapture;
+import androidx.camera.core.Preview;
+import androidx.camera.lifecycle.ProcessCameraProvider;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 import com.example.oneservicosopticos.R;
 import com.example.oneservicosopticos.activity.ui.main.SectionsPagerAdapter;
@@ -9,6 +14,8 @@ import com.example.oneservicosopticos.databinding.ActivityPedidoLenteAcabadaBind
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.common.util.concurrent.ListenableFuture;
+
 import android.view.View;
 
 public class PedidoLenteAcabadaActivity extends AppCompatActivity {
@@ -16,6 +23,7 @@ public class PedidoLenteAcabadaActivity extends AppCompatActivity {
     private ActivityPedidoLenteAcabadaBinding binding;
     private ViewPager2 viewPager;
     private TabLayout tabs;
+    private ImageCapture imageCapture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,8 @@ public class PedidoLenteAcabadaActivity extends AppCompatActivity {
 
         viewPager = binding.viewPager;
         tabs = binding.tabs;
+
+
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, this);
         viewPager.setAdapter(sectionsPagerAdapter);
@@ -44,13 +54,20 @@ public class PedidoLenteAcabadaActivity extends AppCompatActivity {
             }
         }).attach();
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        binding.extendedFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null)
-                        .setAnchorView(R.id.fab).show();
+                        .setAnchorView(R.id.extended_fab).show();
             }
         });
+
+
+
+
     }
+
+
+
 }
