@@ -1,21 +1,27 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Imagem tirada pela câmera -->
     <ImageView
         android:id="@+id/photoView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerInside"
-        android:contentDescription="Foto capturada" />
+        android:scaleType="fitCenter" />
 
+    <!-- Contêiner para os marcadores -->
+    <FrameLayout
+        android:id="@+id/markerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Botão para calcular as medidas -->
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="16dp"
         android:text="Calcular" />
-</RelativeLayout>
+</FrameLayout>
