@@ -22,7 +22,7 @@ public class MarkersActivity extends AppCompatActivity {
 
     // Marcadores
     private ImageView markerLeftCross, markerRightCross;
-    private ImageView markerVerticalBar, markerTopBar, markerBottomBar;
+    private ImageView markerVerticalBar, markerLeftBar, markerRigthBar;
     private ImageView markerLeftL, markerRightL;
 
     private String photoPath;
@@ -65,8 +65,8 @@ public class MarkersActivity extends AppCompatActivity {
         markerLeftCross = createMarker(R.drawable.cross_marker);
         markerRightCross = createMarker(R.drawable.cross_marker);
         markerVerticalBar = createMarker(R.drawable.vertical_bar);
-        markerTopBar = createMarker(R.drawable.horizontal_bar);
-        markerBottomBar = createMarker(R.drawable.horizontal_bar);
+        markerLeftBar = createMarker(R.drawable.horizontal_bar);
+        markerRigthBar = createMarker(R.drawable.horizontal_bar);
         markerLeftL = createMarker(R.drawable.l_marker); // Marcador L esquerdo
         markerRightL = createMarker(R.drawable.l_marker_mirror); // Marcador L direito espelhado
 
@@ -77,7 +77,7 @@ public class MarkersActivity extends AppCompatActivity {
     private ImageView createMarker(int drawableRes) {
         ImageView marker = new ImageView(this);
         marker.setImageResource(drawableRes);
-        marker.setLayoutParams(new FrameLayout.LayoutParams(50, 50)); // Tamanho padrão
+        marker.setLayoutParams(new FrameLayout.LayoutParams(200, 200)); // Tamanho padrão
         marker.setOnTouchListener(new MarkerTouchListener());
         ((FrameLayout) findViewById(R.id.markerContainer)).addView(marker);
         return marker;
@@ -88,36 +88,36 @@ public class MarkersActivity extends AppCompatActivity {
 
         // Left cross
         params = (FrameLayout.LayoutParams) markerLeftCross.getLayoutParams();
-        params.leftMargin = 100;
+        params.leftMargin = 350;
         params.topMargin = 200;
         markerLeftCross.setLayoutParams(params);
 
         // Right cross
         params = (FrameLayout.LayoutParams) markerRightCross.getLayoutParams();
-        params.leftMargin = 600;
+        params.leftMargin = 750;
         params.topMargin = 200;
         markerRightCross.setLayoutParams(params);
 
         // Vertical bar
         params = (FrameLayout.LayoutParams) markerVerticalBar.getLayoutParams();
-        params.leftMargin = 350;
+        params.leftMargin = 500;
         params.topMargin = 200;
         params.height = 200;
         markerVerticalBar.setLayoutParams(params);
 
         // Top horizontal bar
-        params = (FrameLayout.LayoutParams) markerTopBar.getLayoutParams();
+        params = (FrameLayout.LayoutParams) markerLeftBar.getLayoutParams();
         params.leftMargin = 200;
         params.topMargin = 100;
         params.width = 300;
-        markerTopBar.setLayoutParams(params);
+        markerLeftBar.setLayoutParams(params);
 
         // Bottom horizontal bar
-        params = (FrameLayout.LayoutParams) markerBottomBar.getLayoutParams();
+        params = (FrameLayout.LayoutParams) markerRigthBar.getLayoutParams();
         params.leftMargin = 200;
         params.topMargin = 400;
         params.width = 300;
-        markerBottomBar.setLayoutParams(params);
+        markerRigthBar.setLayoutParams(params);
 
         // Left L
         params = (FrameLayout.LayoutParams) markerLeftL.getLayoutParams();
@@ -132,10 +132,68 @@ public class MarkersActivity extends AppCompatActivity {
         markerRightL.setLayoutParams(params);
     }
 
+
     private void calculateMeasurements() {
-        // Placeholder para lógica de cálculo
-        Toast.makeText(this, "Cálculo realizado com sucesso!", Toast.LENGTH_SHORT).show();
+            // Medidas de um cartão de crédito comum em milímetros (85.60 mm x 53.98 mm)
+            final double creditCardWidth = 85.60;
+
+            // Obter as coordenadas dos centros dos marcadores
+            float[] centerLeftCross = getCenterCoordinates(markerLeftCross);
+            float[] centerRightCross = getCenterCoordinates(markerRightCross);
+            float[] centerVerticalBar = getCenterCoordinates(markerVerticalBar);
+            float[] topLeftL = getTopCoordinates(markerLeftL);
+            float[] topRightL = getTopCoordinates(markerRightL);
+
+            // Calcular as distâncias em pixels
+            double dnpDireito = calculateDistance(centerLeftCross, centerVerticalBar);
+            double dnpEsquerdo = calculateDistance(centerRightCross, centerVerticalBar);
+            double alturaDireito = calculateHeight(centerLeftCross, topLeftL);
+            double alturaEsquerdo = calculateHeight(centerRightCross, topRightL);
+            double medidaCartao = calculateDistance(topLeftL, topRightL);
+
+            // Ajustar as medidas com base no cartão de crédito
+            double pixelToMmFactor = creditCardWidth / medidaCartao;
+            dnpDireito *= pixelToMmFactor;
+            dnpEsquerdo *= pixelToMmFactor;
+            alturaDireito *= pixelToMmFactor;
+            alturaEsquerdo *= pixelToMmFactor;
+
+            // Exibir as medidas
+            String message = String.format("DNP Direito: %.2f mm\nDNP Esquerdo: %.2f mm\nAltura Direito: %.2f mm\nAltura Esquerdo: %.2f mm\nMedida Cartão: %.2f mm",
+                    dnpDireito, dnpEsquerdo, alturaDireito, alturaEsquerdo, creditCardWidth);
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
+
+// Função para obter as coordenadas centrais de um marcador
+        private float[] getCenterCoordinates(View view) {
+            int[] location = new int[2];
+            view.getLocationOnScreen(location);
+            float centerX = location[0] + view.getWidth() / 2f;
+            float centerY = location[1] + view.getHeight() / 2f;
+            return new float[]{centerX, centerY};
+        }
+
+// Função para obter as coordenadas do topo de um marcador
+        private float[] getTopCoordinates(View view) {
+            int[] location = new int[2];
+            view.getLocationOnScreen(location);
+            float topX = location[0] + view.getWidth() / 2f;
+            float topY = location[1];
+            return new float[]{topX, topY};
+        }
+
+// Função para calcular a distância entre dois pontos
+        private double calculateDistance(float[] point1, float[] point2) {
+            return Math.sqrt(Math.pow(point2[0] - point1[0], 2) + Math.pow(point2[1] - point1[1], 2));
+        }
+
+// Função para calcular a altura entre dois pontos
+        private double calculateHeight(float[] point1, float[] point2) {
+            return Math.abs(point2[1] - point1[1]);
+        }
+
+
+
 
     private class MarkerTouchListener implements View.OnTouchListener {
 
