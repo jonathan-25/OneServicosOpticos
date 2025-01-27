@@ -34,7 +34,7 @@ public class DadosServicoFragment extends Fragment {
                 result -> {
                     Boolean cameraPermissionGranted = result.getOrDefault(Manifest.permission.CAMERA, false);
 
-                    android.util.Log.d("DadosLenteFragment", "Permissão de câmera concedida: " + cameraPermissionGranted);
+                    android.util.Log.d("DadosServicoFragment", "Permissão de câmera concedida: " + cameraPermissionGranted);
 
                     if (cameraPermissionGranted != null && cameraPermissionGranted) {
                         openCameraActivity();
@@ -49,7 +49,7 @@ public class DadosServicoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Infla o layout
-        View view = inflater.inflate(R.layout.fragment_dados_lente, container, false);
+        View view = inflater.inflate(R.layout.fragment_dados_servico, container, false);
 
         Button openCameraButton = view.findViewById(R.id.openCameraButton);
         openCameraButton.setOnClickListener(v -> checkPermissionsAndOpenCamera());
@@ -58,7 +58,7 @@ public class DadosServicoFragment extends Fragment {
     }
 
     private void checkPermissionsAndOpenCamera() {
-        android.util.Log.d("DadosLenteFragment", "Verificando permissões de câmera");
+        android.util.Log.d("DadosServicoFragment", "Verificando permissões de câmera");
 
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             openCameraActivity();
