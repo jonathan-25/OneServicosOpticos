@@ -49,7 +49,6 @@
         android:layout_marginBottom="16dp"
         android:contentDescription="fab"
         android:textColor="@color/black"
-        android:text="Salvar Pedido"
         android:backgroundTint="#FF8F00"
         app:icon="@drawable/disk_save"
         app:iconSize="50dp"
