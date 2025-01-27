@@ -22,55 +22,43 @@ import com.example.oneservicosopticos.activity.CameraActivity;
 
 public class DadosLenteFragment extends Fragment {
 
-    private ActivityResultLauncher<String[]> permissionLauncher;
+
+
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+
+    private String mParam1;
+    private String mParam2;
+
+    public DadosLenteFragment() {
+        // Required empty public constructor
+    }
+
+
+
+    public static DadosLenteFragment newInstance(String param1, String param2) {
+        DadosLenteFragment fragment = new DadosLenteFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Inicializa o launcher para solicitar permissões
-        permissionLauncher = registerForActivityResult(
-                new ActivityResultContracts.RequestMultiplePermissions(),
-                result -> {
-                    Boolean cameraPermissionGranted = result.getOrDefault(Manifest.permission.CAMERA, false);
-
-                    android.util.Log.d("DadosLenteFragment", "Permissão de câmera concedida: " + cameraPermissionGranted);
-
-                    if (cameraPermissionGranted != null && cameraPermissionGranted) {
-                        openCameraActivity();
-                    } else {
-                        Toast.makeText(getContext(), "Permissão de câmera necessária", Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Infla o layout
-        View view = inflater.inflate(R.layout.fragment_dados_lente, container, false);
-
-        Button openCameraButton = view.findViewById(R.id.openCameraButton);
-        openCameraButton.setOnClickListener(v -> checkPermissionsAndOpenCamera());
-
-        return view;
-    }
-
-    private void checkPermissionsAndOpenCamera() {
-        android.util.Log.d("DadosLenteFragment", "Verificando permissões de câmera");
-
-        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-            openCameraActivity();
-        } else {
-            // Solicita a permissão de câmera
-            permissionLauncher.launch(new String[]{Manifest.permission.CAMERA});
-        }
-    }
-
-    private void openCameraActivity() {
-        android.util.Log.d("DadosLenteFragment", "Abrindo a CameraActivity");
-        Intent intent = new Intent(getActivity(), CameraActivity.class);
-        startActivity(intent);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_dados_lente, container, false);
     }
 }
