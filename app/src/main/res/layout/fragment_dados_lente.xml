@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="4dp">
 
 
         <TextView
@@ -341,9 +341,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
+                    android:textStyle="bold"
                     android:text="Dominante"
                     android:textAlignment="center"
-                    android:textColor="#000000"     />
+                    android:textColor="#246B22"     />
 
 
             </TableRow>
@@ -393,8 +394,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dominante"
-                    android:textOff="Direito"
-                    android:textOn="Esquerdo" />
+                    android:backgroundTint="#629E61"
+                    android:textOff="Direit"
+                    android:textOn="Esquer" />
 
 
             </TableRow>
@@ -440,9 +442,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
+                    android:textStyle="bold"
                     android:text="Peso"
                     android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textColor="#8E24AA" />
 
 
             </TableRow>
@@ -492,8 +495,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Peso"
-                    android:textOff="Direito"
-                    android:textOn="Esquerdo" />
+                    android:backgroundTint="#B663CC"
+                    android:textOff="Direit"
+                    android:textOn="Esquer" />
 
 
             </TableRow>
