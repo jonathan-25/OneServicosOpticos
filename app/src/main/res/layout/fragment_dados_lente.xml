@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF"> <!-- Fundo branco -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,8 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="@color/black"
-            android:text="Grau e Adicao" />
+            android:text="Grau e Adicao"
+            android:textColor="@color/black" />
 
         <!-- Campos menores em 3 linhas e 3 colunas -->
         <TableLayout
@@ -63,11 +63,11 @@
                 android:id="@+id/textLonge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:text="Longe"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <TableRow>
 
@@ -294,11 +294,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textSize="16dp"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:text="Perto"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
 
             <TableRow>
@@ -333,7 +333,7 @@
                     android:padding="4dp"
                     android:text="Eixo"
                     android:textAlignment="textStart"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/labelolhoDominate"
@@ -341,10 +341,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:textStyle="bold"
                     android:text="Dominante"
                     android:textAlignment="center"
-                    android:textColor="#246B22"     />
+                    android:textColor="#246B22"
+                    android:textStyle="bold" />
 
 
             </TableRow>
@@ -393,8 +393,9 @@
                     android:id="@+id/toggleButtonDominante"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dominante"
                     android:backgroundTint="#629E61"
+                    android:layout_gravity="center"
+                    android:text="Dominante"
                     android:textOff="Direit"
                     android:textOn="Esquer" />
 
@@ -434,7 +435,7 @@
                     android:padding="4dp"
                     android:text="Eixo"
                     android:textAlignment="textStart"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/labelolhoPeso"
@@ -442,10 +443,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:textStyle="bold"
                     android:text="Peso"
                     android:textAlignment="center"
-                    android:textColor="#8E24AA" />
+                    android:textColor="#8E24AA"
+                    android:textStyle="bold" />
 
 
             </TableRow>
@@ -490,14 +491,26 @@
                     android:textColorHint="#888888"
                     android:textSize="14sp" />
 
-                <ToggleButton
-                    android:id="@+id/toggleButtonPeso"
+                <RadioGroup
+                    android:id="@+id/radioGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Peso"
-                    android:backgroundTint="#B663CC"
-                    android:textOff="Direit"
-                    android:textOn="Esquer" />
+                    android:background="#CE67E9"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="D" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="E" />
+                </RadioGroup>
 
 
             </TableRow>
@@ -534,7 +547,6 @@
             android:hint="OBS para lente"
             android:textColor="#000000"
             android:textColorHint="#888888" />
-
 
 
     </LinearLayout>
