@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
 
 
         <TextView
@@ -27,11 +28,255 @@
             android:textColorHint="#888888" />
 
 
+        <TextView
+            android:id="@+id/textObservacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Observacoes"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editObservacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint="Digite observacoes da armacao"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:text="Medidas Armação" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/tablelayout_background"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/labelHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Horizontal"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelDiagonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Diagonal"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelVertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Vertical"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/labelPonte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Ponte"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Medida H"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editDiagonal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Medida D"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editVertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Medida V"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editPonte"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Medida P"
+                    android:padding="16dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/labelHaste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Haste"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelSerie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Serie"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/labelIncPantog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Inc pantog"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/labelDistVertice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Dist Vertice"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editHaste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Haste"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editSerie"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="N Serie"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editIncPantog"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Pantograf"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/editDistvertice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Distancia"
+                    android:padding="14dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+        </TableLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:textColor="@color/black"
             android:text="Medidas DP e Altura" />
 
@@ -74,7 +319,7 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Prisma D"
-                    android:textAlignment="center"
+                    android:textAlignment="textEnd"
                     android:textColor="#000000" />
 
                 <TextView
@@ -83,7 +328,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="Prisma D"
+                    android:text="Prism Eixo"
                     android:textAlignment="center"
                     android:textColor="#000000" />
 
@@ -188,7 +433,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="Prisma E"
+                    android:text="Prism Eixo"
                     android:textAlignment="center"
                     android:textColor="#000000" />
 
@@ -256,13 +501,26 @@
         <Button
             android:id="@+id/openCameraButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="70dp"
-            android:backgroundTint="#43A047"
-            android:drawableLeft="@drawable/can"
+            android:layout_height="97dp"
+            android:backgroundTint="#2196F3"
+            android:drawableLeft="@drawable/ic_launcher_foreground"
             android:padding="10dp"
-            android:text="Tire as Medidas DP e Altura de seu cliente posicionando marcadores na imagem  !"
-            android:textSize="18dp" />
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:text="Tire as medidas DP e altura de seu cliente posicionando marcadores na imagem  !"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:backgroundTint="#9F21F3"
+            android:drawableLeft="@drawable/ic_receita"
+            android:padding="10dp"
+            android:text="Salvar Receita Medica"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:textSize="16dp" />
 
     </LinearLayout>
 </ScrollView>
