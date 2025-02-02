@@ -1,5 +1,6 @@
 package com.example.oneservicosopticos.activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.oneservicosopticos.R;
+import com.example.oneservicosopticos.activity.fragments.DadosServicoFragment;
 
 public class MarkersActivity extends AppCompatActivity {
 
@@ -132,68 +134,59 @@ public class MarkersActivity extends AppCompatActivity {
         markerRightL.setLayoutParams(params);
     }
 
-
     private void calculateMeasurements() {
-            // Medidas de um cartão de crédito comum em milímetros (85.60 mm x 53.98 mm)
-            final double creditCardWidth = 85.60;
+        final double creditCardWidth = 85.60;
 
-            // Obter as coordenadas dos centros dos marcadores
-            float[] centerLeftCross = getCenterCoordinates(markerLeftCross);
-            float[] centerRightCross = getCenterCoordinates(markerRightCross);
-            float[] centerVerticalBar = getCenterCoordinates(markerVerticalBar);
-            float[] topLeftL = getTopCoordinates(markerLeftL);
-            float[] topRightL = getTopCoordinates(markerRightL);
+        float[] centerLeftCross = getCenterCoordinates(markerLeftCross);
+        float[] centerRightCross = getCenterCoordinates(markerRightCross);
+        float[] centerVerticalBar = getCenterCoordinates(markerVerticalBar);
+        float[] topLeftL = getTopCoordinates(markerLeftL);
+        float[] topRightL = getTopCoordinates(markerRightL);
 
-            // Calcular as distâncias em pixels
-            double dnpDireito = calculateDistance(centerLeftCross, centerVerticalBar);
-            double dnpEsquerdo = calculateDistance(centerRightCross, centerVerticalBar);
-            double alturaDireito = calculateHeight(centerLeftCross, topLeftL);
-            double alturaEsquerdo = calculateHeight(centerRightCross, topRightL);
-            double medidaCartao = calculateDistance(topLeftL, topRightL);
+        // Usando double para cálculos
+        double dnpDireito = calculateDistance(centerLeftCross, centerVerticalBar);
+        double dnpEsquerdo = calculateDistance(centerRightCross, centerVerticalBar);
+        double alturaDireito = calculateHeight(centerLeftCross, topLeftL);
+        double alturaEsquerdo = calculateHeight(centerRightCross, topRightL);
+        double medidaCartao = calculateDistance(topLeftL, topRightL);
 
-            // Ajustar as medidas com base no cartão de crédito
-            double pixelToMmFactor = creditCardWidth / medidaCartao;
-            dnpDireito *= pixelToMmFactor;
-            dnpEsquerdo *= pixelToMmFactor;
-            alturaDireito *= pixelToMmFactor;
-            alturaEsquerdo *= pixelToMmFactor;
+        // Cálculo do fator de conversão de pixels para milímetros
+        double pixelToMmFactor = creditCardWidth / medidaCartao;
+        dnpDireito *= pixelToMmFactor;
+        dnpEsquerdo *= pixelToMmFactor;
+        alturaDireito *= pixelToMmFactor;
+        alturaEsquerdo *= pixelToMmFactor;
 
-            // Exibir as medidas
-            String message = String.format("DNP Direito: %.2f mm\nDNP Esquerdo: %.2f mm\nAltura Direito: %.2f mm\nAltura Esquerdo: %.2f mm\nMedida Cartão: %.2f mm",
-                    dnpDireito, dnpEsquerdo, alturaDireito, alturaEsquerdo, creditCardWidth);
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+
+        //    aqui ajustei para enviar dados para "DadosFragmentPedidos"  e lá recebi dentro do OnCreatView . mas nao funciona ...
+
+
+        finish();
     }
 
-// Função para obter as coordenadas centrais de um marcador
-        private float[] getCenterCoordinates(View view) {
-            int[] location = new int[2];
-            view.getLocationOnScreen(location);
-            float centerX = location[0] + view.getWidth() / 2f;
-            float centerY = location[1] + view.getHeight() / 2f;
-            return new float[]{centerX, centerY};
-        }
+    private float[] getCenterCoordinates(View view) {
+        int[] location = new int[2];
+        view.getLocationOnScreen(location);
+        float centerX = location[0] + view.getWidth() / 2f;
+        float centerY = location[1] + view.getHeight() / 2f;
+        return new float[]{centerX, centerY};
+    }
 
-// Função para obter as coordenadas do topo de um marcador
-        private float[] getTopCoordinates(View view) {
-            int[] location = new int[2];
-            view.getLocationOnScreen(location);
-            float topX = location[0] + view.getWidth() / 2f;
-            float topY = location[1];
-            return new float[]{topX, topY};
-        }
+    private float[] getTopCoordinates(View view) {
+        int[] location = new int[2];
+        view.getLocationOnScreen(location);
+        float topX = location[0] + view.getWidth() / 2f;
+        float topY = location[1];
+        return new float[]{topX, topY};
+    }
 
-// Função para calcular a distância entre dois pontos
-        private double calculateDistance(float[] point1, float[] point2) {
-            return Math.sqrt(Math.pow(point2[0] - point1[0], 2) + Math.pow(point2[1] - point1[1], 2));
-        }
+    private double calculateDistance(float[] point1, float[] point2) {
+        return Math.sqrt(Math.pow(point2[0] - point1[0], 2) + Math.pow(point2[1] - point1[1], 2));
+    }
 
-// Função para calcular a altura entre dois pontos
-        private double calculateHeight(float[] point1, float[] point2) {
-            return Math.abs(point2[1] - point1[1]);
-        }
-
-
-
+    private double calculateHeight(float[] point1, float[] point2) {
+        return Math.abs(point2[1] - point1[1]);
+    }
 
     private class MarkerTouchListener implements View.OnTouchListener {
 

@@ -1,45 +1,35 @@
 package com.example.oneservicosopticos.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.camera.core.CameraSelector;
-import androidx.camera.core.ImageCapture;
-import androidx.camera.core.Preview;
-import androidx.camera.lifecycle.ProcessCameraProvider;
-import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
+
 import com.example.oneservicosopticos.R;
+import com.example.oneservicosopticos.activity.fragments.DadosServicoFragment;
 import com.example.oneservicosopticos.activity.ui.main.SectionsPagerAdapter;
 import com.example.oneservicosopticos.databinding.ActivityPedidoLenteAcabadaBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.common.util.concurrent.ListenableFuture;
 
 import android.view.View;
 
 public class PedidoLenteAcabadaActivity extends AppCompatActivity {
-
     private ActivityPedidoLenteAcabadaBinding binding;
     private ViewPager2 viewPager;
     private TabLayout tabs;
-    private ImageCapture imageCapture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityPedidoLenteAcabadaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         viewPager = binding.viewPager;
         tabs = binding.tabs;
-
-
-
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, this);
         viewPager.setAdapter(sectionsPagerAdapter);
-
         new TabLayoutMediator(tabs, viewPager, (tab, position) -> {
             switch (position) {
                 case 0:
@@ -52,22 +42,12 @@ public class PedidoLenteAcabadaActivity extends AppCompatActivity {
                     tab.setText(R.string.tab_text_3);
                     break;
             }
-        }).attach();
-
+        }).attach(); // aqui vamos salvar o pedido ao fim do preenchimento de dados ....
         binding.extendedFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null)
-                        .setAnchorView(R.id.extended_fab).show();
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).setAnchorView(R.id.extended_fab).show();
             }
         });
-
-
-
-
     }
-
-
-
 }

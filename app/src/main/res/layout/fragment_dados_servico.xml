@@ -156,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
-                    android:hint="Medida P"
+                    android:hint="Ponte"
                     android:padding="16dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -248,7 +248,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
-                    android:hint="Pantograf"
+                    android:hint="Pantog"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -352,7 +352,7 @@
 
 
                 <EditText
-                    android:id="@+id/editAlturD"
+                    android:id="@+id/editAlturaD"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -457,7 +457,7 @@
 
 
                 <EditText
-                    android:id="@+id/editAlturE"
+                    android:id="@+id/editAlturaE"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -503,7 +503,7 @@
             android:layout_width="match_parent"
             android:layout_height="97dp"
             android:backgroundTint="#2196F3"
-            android:drawableLeft="@drawable/ic_launcher_foreground"
+            android:drawableLeft="@drawable/ic_camera_medidas"
             android:padding="10dp"
             android:textAlignment="textStart"
             android:textColor="@color/black"

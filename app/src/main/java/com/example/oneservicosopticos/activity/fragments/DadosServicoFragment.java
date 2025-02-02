@@ -14,19 +14,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.oneservicosopticos.R;
 import com.example.oneservicosopticos.activity.CameraActivity;
+import com.example.oneservicosopticos.activity.MarkersActivity;
 
+import java.util.Locale;
 
 public class DadosServicoFragment extends Fragment {
 
     private ActivityResultLauncher<String[]> permissionLauncher;
+    private EditText editDnpD, editDnpE, editAlturaD, editAlturaE;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // Inicializa o launcher para solicitar permissões
         permissionLauncher = registerForActivityResult(
@@ -51,8 +57,18 @@ public class DadosServicoFragment extends Fragment {
         // Infla o layout
         View view = inflater.inflate(R.layout.fragment_dados_servico, container, false);
 
+        // Inicializa os campos EditText
+        editDnpD = view.findViewById(R.id.editDnpD);
+        editDnpE = view.findViewById(R.id.editDnpE);
+        editAlturaD = view.findViewById(R.id.editAlturaD);
+        editAlturaE = view.findViewById(R.id.editAlturaE);
+
+
         Button openCameraButton = view.findViewById(R.id.openCameraButton);
         openCameraButton.setOnClickListener(v -> checkPermissionsAndOpenCamera());
+
+
+        //      aqui estava pegando os dados da MarkersActivity ...
 
         return view;
     }
@@ -73,4 +89,23 @@ public class DadosServicoFragment extends Fragment {
         Intent intent = new Intent(getActivity(), CameraActivity.class);
         startActivity(intent);
     }
+
+
+
+    // Método para chamar a MarkersActivity e enviar a imagem
+    public void openMarkersActivity(String photoPath) {
+        Intent intent = new Intent(getActivity(), MarkersActivity.class);
+        intent.putExtra("photoPath", photoPath);
+        startActivity(intent);
+    }
+
+    public void updateMeasurements(double dnpDireito, double dnpEsquerdo, double alturaDireito, double alturaEsquerdo) {
+        // Atualiza os campos EditText com os valores recebidos
+        editDnpD.setText(String.format(Locale.getDefault(), "%.2f", dnpDireito));
+        editDnpE.setText(String.format(Locale.getDefault(), "%.2f", dnpEsquerdo));
+        editAlturaD.setText(String.format(Locale.getDefault(), "%.2f", alturaDireito));
+        editAlturaE.setText(String.format(Locale.getDefault(), "%.2f", alturaEsquerdo));
+    }
+
+
 }
