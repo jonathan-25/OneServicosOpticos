@@ -10,9 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.oneservicosopticos.EscolhaLentesActivity;
 import com.example.oneservicosopticos.R;
-import com.example.oneservicosopticos.TelaInicialActivity;
 
 public class EscolhaTipoVendaActivity extends AppCompatActivity {
 
