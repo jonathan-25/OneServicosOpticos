@@ -1,6 +1,5 @@
-package com.example.oneservicosopticos.activity;
+package com.example.oneservicosopticos.helpers;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.oneservicosopticos.R;
-import com.example.oneservicosopticos.activity.fragments.DadosServicoFragment;
 
 public class MarkersActivity extends AppCompatActivity {
 
@@ -64,10 +62,10 @@ public class MarkersActivity extends AppCompatActivity {
 
     private void initializeMarkers() {
         // Criação e configuração dos marcadores
-        markerLeftCross = createMarker(R.drawable.cross_marker);
+        markerLeftCross = createMarker(R.drawable.cross_marker_left);
         markerRightCross = createMarker(R.drawable.cross_marker);
         markerVerticalBar = createMarker(R.drawable.vertical_bar);
-        markerLeftBar = createMarker(R.drawable.horizontal_bar);
+        markerLeftBar = createMarker(R.drawable.horizontal_bar_left);
         markerRigthBar = createMarker(R.drawable.horizontal_bar);
         markerLeftL = createMarker(R.drawable.l_marker); // Marcador L esquerdo
         markerRightL = createMarker(R.drawable.l_marker_mirror); // Marcador L direito espelhado
@@ -90,13 +88,13 @@ public class MarkersActivity extends AppCompatActivity {
 
         // Left cross
         params = (FrameLayout.LayoutParams) markerLeftCross.getLayoutParams();
-        params.leftMargin = 350;
+        params.leftMargin = 150;
         params.topMargin = 200;
         markerLeftCross.setLayoutParams(params);
 
         // Right cross
         params = (FrameLayout.LayoutParams) markerRightCross.getLayoutParams();
-        params.leftMargin = 750;
+        params.leftMargin = 350;
         params.topMargin = 200;
         markerRightCross.setLayoutParams(params);
 
@@ -129,7 +127,7 @@ public class MarkersActivity extends AppCompatActivity {
 
         // Right L (mirrored)
         params = (FrameLayout.LayoutParams) markerRightL.getLayoutParams();
-        params.leftMargin = 650;
+        params.leftMargin = 450;
         params.topMargin = 300;
         markerRightL.setLayoutParams(params);
     }
@@ -156,6 +154,9 @@ public class MarkersActivity extends AppCompatActivity {
         dnpEsquerdo *= pixelToMmFactor;
         alturaDireito *= pixelToMmFactor;
         alturaEsquerdo *= pixelToMmFactor;
+
+        // ajustar toast paara fica mais legivel e com menos casas decimais
+        Toast.makeText(MarkersActivity.this, "DPD =" + dnpDireito + "DPE =" + dnpEsquerdo + "ALtD =" + alturaDireito + "AltE =" + alturaEsquerdo , Toast.LENGTH_LONG).show();
 
 
         //    aqui ajustei para enviar dados para "DadosFragmentPedidos"  e lá recebi dentro do OnCreatView . mas nao funciona ...

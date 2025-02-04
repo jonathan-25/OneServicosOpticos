@@ -1,4 +1,4 @@
-package com.example.oneservicosopticos.activity.fragments;
+package com.example.oneservicosopticos.fragments;
 
 import android.Manifest;
 import android.content.Intent;
@@ -18,8 +18,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.oneservicosopticos.R;
-import com.example.oneservicosopticos.activity.CameraActivity;
-import com.example.oneservicosopticos.activity.MarkersActivity;
+import com.example.oneservicosopticos.helpers.CameraActivity;
+import com.example.oneservicosopticos.helpers.MarkersActivity;
 
 import java.util.Locale;
 

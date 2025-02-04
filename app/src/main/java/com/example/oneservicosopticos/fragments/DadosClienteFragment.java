@@ -1,4 +1,4 @@
-package com.example.oneservicosopticos.activity.fragments;
+package com.example.oneservicosopticos.fragments;
 
 import android.os.Bundle;
 
