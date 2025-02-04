@@ -1,20 +1,21 @@
 package com.example.oneservicosopticos.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.oneservicosopticos.R;
-import com.example.oneservicosopticos.activity.fragments.DadosServicoFragment;
+import com.example.oneservicosopticos.venda.Venda;
 import com.example.oneservicosopticos.activity.ui.main.SectionsPagerAdapter;
 import com.example.oneservicosopticos.databinding.ActivityPedidoLenteAcabadaBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import android.view.View;
+import android.widget.Toast;
 
 public class PedidoLenteAcabadaActivity extends AppCompatActivity {
     private ActivityPedidoLenteAcabadaBinding binding;
@@ -46,8 +47,33 @@ public class PedidoLenteAcabadaActivity extends AppCompatActivity {
         binding.extendedFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).setAnchorView(R.id.extended_fab).show();
+
+                // Crie um objeto Venda com os dados preenchidos
+                Venda venda = new Venda();
+                // Preencha o objeto venda com dados dos campos de entrada (EditText, ToggleButton, etc.)
+                venda.setNome("Nome do Cliente");
+                venda.setSobrenome("Sobrenome do Cliente");
+                // ... (preencha todos os outros atributos)
+
+                // Obtenha o CPF do cliente (presume-se que haja um campo EditText ou algo similar para o CPF)
+                String cpf = venda.getCpf();
+
+                // Obtenha a referência do Firebase Database
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("clientes");
+
+                // Salve os dados no Firebase usando o CPF como chave
+                databaseReference.child(cpf).setValue(venda)
+                        .addOnSuccessListener(aVoid -> {
+                            Toast.makeText(PedidoLenteAcabadaActivity.this, "Dados do cliente salvos com sucesso!", Toast.LENGTH_SHORT).show();
+                        })
+                        .addOnFailureListener(e -> {
+                            Toast.makeText(PedidoLenteAcabadaActivity.this, "Falha ao salvar dados do cliente: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
             }
         });
+
+
+
+
     }
 }

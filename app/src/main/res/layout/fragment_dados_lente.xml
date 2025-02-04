@@ -10,39 +10,110 @@
         android:orientation="vertical"
         android:padding="4dp">
 
-
-        <TextView
-            android:id="@+id/text_lenteOD"
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lente Olho Direito"
-            android:textColor="#000000" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editLenteOD"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="Lente OD"
-            android:textColor="#000000"
-            android:textColorHint="#888888" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/text_lenteOE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:text="Lente Olho Esquerdo"
-            android:textColor="#000000" />
 
-        <EditText
-            android:id="@+id/editLenteOE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="Lente OE"
-            android:textColor="#000000"
-            android:textColorHint="#888888" />
+                <TextView
+                    android:id="@+id/textLenteOD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Lente Olho Direito"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/textValorLenteOD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="40dp"
+                    android:text="$"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editLenteOD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Lente Od"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888" />
+
+                <EditText
+                    android:id="@+id/editValorLenteOd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Valor"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_lenteOE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="Lente Olho Esquerdo"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editLenteOe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Lente Oe"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888" />
+
+                <EditText
+                    android:id="@+id/editivalorLenteOe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Valor"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888" />
+
+
+            </TableRow>
+        </TableLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -393,8 +464,8 @@
                     android:id="@+id/toggleButtonDominante"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#629E61"
                     android:layout_gravity="center"
+                    android:backgroundTint="#629E61"
                     android:text="Dominante"
                     android:textOff="Direit"
                     android:textOn="Esquer" />
@@ -495,8 +566,8 @@
                     android:id="@+id/radioGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#CE67E9"
                     android:layout_gravity="center"
+                    android:background="#CE67E9"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -516,21 +587,68 @@
             </TableRow>
         </TableLayout>
 
-        <TextView
-            android:id="@+id/textTratamento"
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tartamento"
-            android:textColor="#000000" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editTratamento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="Escolha um tratamento"
-            android:textColor="#000000"
-            android:textColorHint="#888888" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textTratamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Tartamento"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/textValorTratamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="40dp"
+                    android:text="$"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/editTratamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Escolha um tratamento"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888" />
+
+                <EditText
+                    android:id="@+id/editValorTratamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:gravity="center"
+                    android:hint="$"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888" />
+
+
+            </TableRow>
+        </TableLayout>
+
 
         <TextView
             android:id="@+id/textObs"
