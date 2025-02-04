@@ -6,14 +6,14 @@
         <shape android:shape="oval">
             <solid android:color="@android:color/transparent"/> <!-- Centro transparente -->
             <size android:width="50dp" android:height="50dp"/> <!-- Tamanho do anel -->
-            <stroke android:width="1.2dp" android:color="#58DBEE"/> <!-- Borda 60% mais fina -->
+            <stroke android:width="1.2dp" android:color="#48FF00"/> <!-- Borda 60% mais fina -->
         </shape>
     </item>
 
     <!-- Ponto central menor -->
     <item android:width="1dp" android:height="1dp" android:gravity="center">
         <shape android:shape="oval">
-            <solid android:color="#58DBEE"/> <!-- Vermelho sólido -->
+            <solid android:color="#48FF00"/> <!-- Vermelho sólido -->
         </shape>
     </item>
 
