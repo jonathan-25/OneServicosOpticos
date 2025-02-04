@@ -23,10 +23,10 @@
         android:theme="@style/Theme.OneServicosOpticos"
         tools:targetApi="31">
         <activity
-            android:name=".activity.MarkersActivity"
+            android:name=".helpers.MarkersActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.CameraActivity"
+            android:name=".helpers.CameraActivity"
             android:exported="false" />
         <activity
             android:name=".activity.PedidoLenteAcabadaActivity"
@@ -37,20 +37,20 @@
             android:name=".activity.EscolhaTipoVendaActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroClienteActivity"
+            android:name=".activity.CadastroClienteActivity"
             android:exported="false" />
         <activity
-            android:name=".EscolhaLentesActivity"
+            android:name=".activity.EscolhaLentesActivity"
             android:exported="false" />
         <activity
-            android:name=".TelaInicialActivity"
+            android:name=".activity.TelaInicialActivity"
             android:exported="false" />
         <activity
             android:name=".PedidoActivity"
             android:exported="false"
             android:label="@string/title_activity_pedido" />
         <activity
-            android:name=".Splash"
+            android:name=".activity.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
