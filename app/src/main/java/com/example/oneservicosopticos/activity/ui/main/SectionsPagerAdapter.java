@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.example.oneservicosopticos.R;
-import com.example.oneservicosopticos.activity.fragments.DadosClienteFragment;
-import com.example.oneservicosopticos.activity.fragments.DadosLenteFragment;
-import com.example.oneservicosopticos.activity.fragments.DadosServicoFragment;
+import com.example.oneservicosopticos.fragments.DadosClienteFragment;
+import com.example.oneservicosopticos.fragments.DadosLenteFragment;
+import com.example.oneservicosopticos.fragments.DadosServicoFragment;
 
 public class SectionsPagerAdapter extends FragmentStateAdapter {
 
