@@ -1,8 +1,6 @@
-package com.example.oneservicosopticos.activity;
+package com.example.oneservicosopticos.helpers;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
