@@ -12,6 +12,10 @@
         android:background="#64B5F6"
         android:theme="@style/Theme.OneServicosOpticos.AppBarOverlay">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
@@ -21,9 +25,21 @@
             android:minHeight="?actionBarSize"
             android:background="#64B5F6"
             android:padding="@dimen/appbar_padding"
-            android:text="Novo Pedido"
+            android:text="Venda de Lente Acabada Nº"
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="Nº do pedido"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:layout_marginRight="16dp"/>
+
+
+        </LinearLayout>
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
