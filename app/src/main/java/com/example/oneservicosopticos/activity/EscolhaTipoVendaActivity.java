@@ -31,5 +31,7 @@ public class EscolhaTipoVendaActivity extends AppCompatActivity {
         Intent intent = new Intent(EscolhaTipoVendaActivity.this, PedidoLenteAcabadaActivity.class);
         startActivity(intent);
 
+
+
     }
 }
