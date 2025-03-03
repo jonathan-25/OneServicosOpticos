@@ -1,0 +1,92 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/edit_text_background">
+
+
+<!-- Primeira linha: número e nome -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/numero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Número"
+            android:textSize="16sp"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nome"
+            android:textSize="16sp"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <!-- Segunda linha: lente olho direito e data -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lente_olho_direito"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lente Olho Direito"
+            android:textSize="16sp"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Data"
+            android:textSize="16sp"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <!-- Terceira linha: lente olho esquerdo e status -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lente_olho_esquerdo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lente Olho Esquerdo"
+            android:textSize="16sp"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Status"
+            android:textSize="16sp"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <!-- Campo para indicador de cor -->
+    <View
+        android:id="@+id/indicador_cor"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#FF0000"
+        android:padding="4dp"/>
+</LinearLayout>

@@ -10,11 +10,29 @@
     tools:context=".activity.TelaInicialActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
+        android:id="@+id/cardVisaoPedidos"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="250dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#B4B3B3"
+        app:cardElevation="4dp"
+        app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
+        app:cardCornerRadius="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:onClick="escolhaTipoVenda"
         app:cardBackgroundColor="#EBABA9"
@@ -24,7 +42,7 @@
 
         <ImageView
             android:id="@+id/imageViewNovoPedido"
-            android:layout_width="152dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/novo_pedido" />
@@ -45,7 +63,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -77,7 +95,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card3"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -88,7 +106,7 @@
 
         <ImageView
             android:id="@+id/imageViewContato"
-            android:layout_width="152dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/atendente" />
@@ -110,7 +128,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card4"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -121,7 +139,7 @@
 
         <ImageView
             android:id="@+id/imageViewCadastro"
-            android:layout_width="152dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/cadastro" />
