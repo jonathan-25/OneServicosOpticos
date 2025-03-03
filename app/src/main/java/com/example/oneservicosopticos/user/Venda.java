@@ -1,4 +1,4 @@
-package com.example.oneservicosopticos.venda;
+package com.example.oneservicosopticos.user;
 
 import java.util.Date;
 
@@ -7,7 +7,8 @@ public class Venda {
     private String id;
     private String lenteOd;
     private String lenteOe;
-    private String peso;
+    private Boolean pesoD;
+    private Boolean pesoE;
     private String tratamento;
     private String observacoes;
     private String armacao;
@@ -20,11 +21,11 @@ public class Venda {
     private String serie;
     private String incPantografica;
     private String distVertice;
-    private Double valorLenteOd;
-    private Double valorLenteOe;
-    private Double valorArmacao;
-    private Double valorTratamento;
-    private Double valorTotal;
+    private String valorLenteOd;
+    private String valorLenteOe;
+    private String valorArmacao;
+    private String valorTratamento;
+    private String valorTotal;
     private Date dataVenda;
 
 
@@ -34,15 +35,17 @@ public class Venda {
     }
 
 
-    public Venda(String id, String lenteOd, String lenteOe, String peso, String tratamento, String observacoes, String armacao, String observacaoArmacao, String horizontal, String diagonal, String vertical, String ponte, String haste, String serie, String incPantografica, String distVertice, Double valorLenteOd, Double valorLenteOe, Double valorArmacao, Double valorTratamento, Double valorTotal, Date dataVenda) {
+    public Venda(String id, String lenteOd, String lenteOe, Boolean pesoD, Boolean pesoE, String tratamento, String observacoes, String armacao, String observacaoArmacao, String horizontal, String diagonal, String vertical, String ponte, String haste, String serie, String incPantografica, String distVertice, String valorLenteOd, String valorLenteOe, String valorArmacao, String valorTratamento, String valorTotal, Date dataVenda) {
         this.id = id;
         this.lenteOd = lenteOd;
         this.lenteOe = lenteOe;
-        this.peso = peso;
+        this.pesoD = pesoD;
+        this.pesoE= pesoE;
         this.tratamento = tratamento;
         this.observacoes = observacoes;
         this.armacao = armacao;
         this.observacaoArmacao = observacaoArmacao;
+
         this.horizontal = horizontal;
         this.diagonal = diagonal;
         this.vertical = vertical;
@@ -79,16 +82,24 @@ public class Venda {
         return lenteOe;
     }
 
+    public Boolean getPesoE() {
+        return pesoE;
+    }
+
+    public void setPesoE(Boolean pesoE) {
+        this.pesoE = pesoE;
+    }
+
     public void setLenteOe(String lenteOe) {
         this.lenteOe = lenteOe;
     }
 
-    public String getPeso() {
-        return peso;
+    public Boolean getPesoD() {
+        return pesoD;
     }
 
-    public void setPeso(String peso) {
-        this.peso = peso;
+    public void setPesoD(Boolean pesoD)  {
+        this.pesoD = pesoD;
     }
 
     public String getTratamento() {
@@ -187,43 +198,43 @@ public class Venda {
         this.distVertice = distVertice;
     }
 
-    public Double getValorLenteOd() {
+    public String getValorLenteOd() {
         return valorLenteOd;
     }
 
-    public void setValorLenteOd(Double valorLenteOd) {
+    public void setValorLenteOd(String valorLenteOd) {
         this.valorLenteOd = valorLenteOd;
     }
 
-    public Double getValorLenteOe() {
+    public String getValorLenteOe() {
         return valorLenteOe;
     }
 
-    public void setValorLenteOe(Double valorLenteOe) {
+    public void setValorLenteOe(String valorLenteOe) {
         this.valorLenteOe = valorLenteOe;
     }
 
-    public Double getValorArmacao() {
+    public String getValorArmacao() {
         return valorArmacao;
     }
 
-    public void setValorArmacao(Double valorArmacao) {
+    public void setValorArmacao(String valorArmacao) {
         this.valorArmacao = valorArmacao;
     }
 
-    public Double getValorTratamento() {
+    public String getValorTratamento() {
         return valorTratamento;
     }
 
-    public void setValorTratamento(Double valorTratamento) {
+    public void setValorTratamento(String valorTratamento) {
         this.valorTratamento = valorTratamento;
     }
 
-    public Double getValorTotal() {
+    public String getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(Double valorTotal) {
+    public void setValorTotal(String valorTotal) {
         this.valorTotal = valorTotal;
     }
 
@@ -234,6 +245,14 @@ public class Venda {
     public void setDataVenda(Date dataVenda) {
         this.dataVenda = dataVenda;
     }
+
+
+    public void salvarPedido(){
+
+
+
+    }
+
 }
 
 
