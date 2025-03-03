@@ -72,6 +72,28 @@
             android:textColor="#000000"
             android:textColorHint="#888888" />
 
+        <TextView
+            android:id="@+id/label_Idade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="1dp"
+            android:text="Idade"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint="Idade"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+
+
 
         <TextView
             android:id="@+id/label_Cpf"
@@ -89,6 +111,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_background"
             android:hint="CPF"
+            android:inputType="number"
             android:padding="12dp"
             android:textColor="#000000"
             android:textColorHint="#888888" />
@@ -138,6 +161,7 @@
             android:id="@+id/label_telefone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:paddingStart="8dp"
             android:paddingTop="4dp"
             android:paddingBottom="1dp"
@@ -150,6 +174,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_background"
             android:hint="Telefone"
+            android:inputType="number"
             android:padding="12dp"
             android:textColor="#000000"
             android:textColorHint="#888888" />
@@ -170,6 +195,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_background"
             android:hint="Celular"
+            android:inputType="number"
             android:padding="12dp"
             android:textColor="#000000"
             android:textColorHint="#888888" />
@@ -250,6 +276,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_background"
             android:hint="CRM do Médico"
+            android:inputType="number"
             android:padding="12dp"
             android:textColor="#000000"
             android:textColorHint="#888888" />

@@ -63,6 +63,7 @@
                     android:background="@drawable/edit_text_background"
                     android:hint="Valor"
 
+                    android:inputType="number|numberDecimal"
                     android:textColor="#000000"
                     android:textColorHint="#888888" />
 
@@ -160,6 +161,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Medida H"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -173,6 +175,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Medida D"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -186,6 +189,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Medida V"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -199,6 +203,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Ponte"
+                    android:inputType="number|numberDecimal"
                     android:padding="16dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -265,6 +270,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Haste"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -291,6 +297,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Pantog"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -304,6 +311,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Distancia"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -386,6 +394,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="DNP D"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -399,6 +408,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Alt D"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -412,6 +422,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Prism D"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -425,6 +436,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Eixo D"
+                    android:inputType="number|numberDecimal"
                     android:padding="16dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -491,6 +503,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="DNP E"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -504,6 +517,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Alt E"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -530,6 +544,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/edit_text_background"
                     android:hint="Eixo E"
+                    android:inputType="number|numberDecimal"
                     android:padding="14dp"
                     android:textColor="#000000"
                     android:textColorHint="#888888"
@@ -598,7 +613,49 @@
 
             </TableRow>
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                android:id="@+id/textValorTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp"
+                android:text="Valor Total - Lente + Servico"
+                android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/editValorTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Valor Total da compra"
+
+                    android:inputType="number|numberDecimal"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888" />
+
+
+            </TableRow>
+
+
         </TableLayout>
+
+
+
 
 
         <Button
