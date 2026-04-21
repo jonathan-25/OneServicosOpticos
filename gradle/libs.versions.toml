@@ -17,6 +17,7 @@ cameraCore = "1.4.1"
 cameraLifecycle = "1.4.1"
 cameraView = "1.4.1"
 firebaseDatabase = "21.0.0"
+cardview = "1.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -36,6 +37,7 @@ camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "
 camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraLifecycle" }
 camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraView" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

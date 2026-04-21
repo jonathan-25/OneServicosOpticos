@@ -13,8 +13,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#7E57C2"
         app:cardCornerRadius="20dp"
@@ -38,8 +38,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#EF5350"
         app:cardCornerRadius="20dp"
@@ -62,8 +62,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#EC407A"
         app:cardCornerRadius="20dp"
@@ -87,8 +87,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#AB47BC"
         app:cardCornerRadius="20dp"
@@ -112,8 +112,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#5C6BC0"
         app:cardCornerRadius="20dp"
@@ -137,8 +137,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView6"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#42A5F5"
         app:cardCornerRadius="20dp"
@@ -162,8 +162,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView7"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#29B6F6"
         app:cardCornerRadius="20dp"
@@ -188,8 +188,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView8"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#26C6DA"
         app:cardCornerRadius="20dp"
@@ -213,8 +213,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView9"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#26A69A"
         app:cardCornerRadius="20dp"
@@ -238,8 +238,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView10"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#66BB6A"
         app:cardCornerRadius="20dp"
@@ -264,8 +264,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView11"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#9CCC65"
         app:cardCornerRadius="20dp"
@@ -289,8 +289,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView12"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#D4E157"
         app:cardCornerRadius="20dp"
@@ -314,8 +314,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView13"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#FFEE58"
         app:cardCornerRadius="20dp"
@@ -340,8 +340,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView14"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#FFCA28"
         app:cardCornerRadius="20dp"
@@ -365,8 +365,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView15"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#FFA726"
         app:cardCornerRadius="20dp"
@@ -391,8 +391,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView16"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#FF7043"
         app:cardCornerRadius="20dp"
@@ -417,8 +417,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView17"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#B9413F"
         app:cardCornerRadius="20dp"
@@ -443,8 +443,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView18"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
         android:onClick="anotarPedido"
         app:cardBackgroundColor="#8F3E3B"
         app:cardCornerRadius="20dp"
